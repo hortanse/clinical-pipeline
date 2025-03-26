@@ -267,15 +267,15 @@ This pipeline incorporates features to support clinical genomics operations:
 
 ## Contributors
 
-- Your Organization Bioinformatics Team
+- Yi-Fan Chou hortanse@gmail.com
 
 ## License
 
-This pipeline is available under [license information].
+
 
 ## Citation
 
-If you use this pipeline in your work, please cite:
 
-[Citation information]
+
+
 
