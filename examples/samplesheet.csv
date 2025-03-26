@@ -1,0 +1,6 @@
+sample_id,patient_id,fastq_1,fastq_2,panel,batch_id
+SAMPLE001,PT00001,/path/to/samples/SAMPLE001_R1.fastq.gz,/path/to/samples/SAMPLE001_R2.fastq.gz,cancer_panel,BATCH001
+SAMPLE002,PT00002,/path/to/samples/SAMPLE002_R1.fastq.gz,/path/to/samples/SAMPLE002_R2.fastq.gz,cancer_panel,BATCH001
+SAMPLE003,PT00003,/path/to/samples/SAMPLE003_R1.fastq.gz,/path/to/samples/SAMPLE003_R2.fastq.gz,cancer_panel,BATCH001
+SAMPLE004,PT00004,/path/to/samples/SAMPLE004_R1.fastq.gz,/path/to/samples/SAMPLE004_R2.fastq.gz,exome,BATCH002
+SAMPLE005,PT00005,/path/to/samples/SAMPLE005_R1.fastq.gz,/path/to/samples/SAMPLE005_R2.fastq.gz,exome,BATCH002 

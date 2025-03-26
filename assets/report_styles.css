@@ -1,0 +1,192 @@
+/* Clinical Genomics Report Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header, section, footer {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24pt;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 18pt;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #3498db;
+    background-color: #f8f9fa;
+}
+
+.logo img {
+    max-height: 80px;
+    max-width: 200px;
+}
+
+.report-info {
+    text-align: right;
+}
+
+.report-type {
+    font-weight: bold;
+    font-size: 14pt;
+    color: #3498db;
+}
+
+.report-date, .report-id {
+    font-size: 10pt;
+    color: #7f8c8d;
+}
+
+/* Information grids */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.info-item {
+    display: flex;
+}
+
+.label {
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 150px;
+}
+
+/* Results summary */
+.summary-box {
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.positive {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.negative {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.inconclusive {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+}
+
+/* Variant table */
+.variants-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.variants-table th, 
+.variants-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.variants-table th {
+    background-color: #f2f2f2;
+}
+
+.pathogenic {
+    background-color: #f8d7da;
+}
+
+.likely-pathogenic {
+    background-color: #ffe5e8;
+}
+
+.vus {
+    background-color: #fff3cd;
+}
+
+.likely-benign {
+    background-color: #e8f4e8;
+}
+
+.benign {
+    background-color: #d4edda;
+}
+
+/* Text sections */
+.interpretation-text {
+    margin-top: 15px;
+    text-align: justify;
+    white-space: pre-line;
+}
+
+/* Footer */
+footer {
+    border-top: 2px solid #3498db;
+    background-color: #f8f9fa;
+    font-size: 10pt;
+}
+
+.disclaimer {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+.signatures {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.signature-block {
+    width: 45%;
+}
+
+/* Print styles */
+@media print {
+    body {
+        font-size: 10pt;
+    }
+    
+    header, section, footer {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .page-break {
+        page-break-after: always;
+    }
+} 

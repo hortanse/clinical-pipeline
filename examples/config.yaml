@@ -1,0 +1,42 @@
+# Clinical Bioinformatics Pipeline Configuration
+# This is an example configuration file that users can modify
+
+# Required parameters
+input: "path/to/samplesheet.csv"
+output: "results"
+genome: "GRCh38"
+
+# Optional parameters
+panel: "path/to/cancer_panel.json"
+ehr_integration: false
+email: "admin@example.com" 
+
+# Compliance parameters
+phi_handling: "encrypted"
+audit_trail: true
+
+# Resource allocation
+max_cpus: 16
+max_memory: "64.GB"
+max_time: "24.h"
+
+# Module-specific parameters
+variant_calling:
+  caller: "haplotypecaller"
+  min_quality: 20
+  min_depth: 10
+
+annotation:
+  vep_cache: "/path/to/vep/cache"
+  plugins: ["ClinVar", "gnomAD", "CADD"]
+  add_custom_annotations: true
+
+interpretation:
+  max_population_af: 0.01
+  include_regions: true
+  acmg_rules: "path/to/acmg_rules.json"
+
+reporting:
+  report_template: "clinical"
+  include_non_passing: false
+  include_metrics: true 

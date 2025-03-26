@@ -1,0 +1,143 @@
+{
+  "name": "Hereditary Cancer Panel",
+  "version": "2.0",
+  "description": "This panel targets genes associated with hereditary cancer syndromes",
+  "genes": [
+    {
+      "symbol": "BRCA1",
+      "transcript": "NM_007294.3",
+      "conditions": ["Hereditary Breast and Ovarian Cancer Syndrome"],
+      "inheritance": "AD",
+      "pli_score": 0.97,
+      "lof_tolerance": "low"
+    },
+    {
+      "symbol": "BRCA2",
+      "transcript": "NM_000059.3",
+      "conditions": ["Hereditary Breast and Ovarian Cancer Syndrome"],
+      "inheritance": "AD",
+      "pli_score": 0.98,
+      "lof_tolerance": "low"
+    },
+    {
+      "symbol": "TP53",
+      "transcript": "NM_000546.5",
+      "conditions": ["Li-Fraumeni Syndrome"],
+      "inheritance": "AD",
+      "pli_score": 0.95,
+      "lof_tolerance": "low"
+    },
+    {
+      "symbol": "APC",
+      "transcript": "NM_000038.5",
+      "conditions": ["Familial Adenomatous Polyposis"],
+      "inheritance": "AD",
+      "pli_score": 0.99,
+      "lof_tolerance": "low"
+    },
+    {
+      "symbol": "MLH1",
+      "transcript": "NM_000249.3",
+      "conditions": ["Lynch Syndrome"],
+      "inheritance": "AD",
+      "pli_score": 0.96,
+      "lof_tolerance": "low"
+    },
+    {
+      "symbol": "MSH2",
+      "transcript": "NM_000251.2",
+      "conditions": ["Lynch Syndrome"],
+      "inheritance": "AD",
+      "pli_score": 0.97,
+      "lof_tolerance": "low"
+    },
+    {
+      "symbol": "MSH6",
+      "transcript": "NM_000179.2",
+      "conditions": ["Lynch Syndrome"],
+      "inheritance": "AD",
+      "pli_score": 0.83,
+      "lof_tolerance": "medium"
+    },
+    {
+      "symbol": "PMS2",
+      "transcript": "NM_000535.5",
+      "conditions": ["Lynch Syndrome"],
+      "inheritance": "AD",
+      "pli_score": 0.92,
+      "lof_tolerance": "low"
+    },
+    {
+      "symbol": "PTEN",
+      "transcript": "NM_000314.4",
+      "conditions": ["PTEN Hamartoma Tumor Syndrome", "Cowden Syndrome"],
+      "inheritance": "AD",
+      "pli_score": 0.93,
+      "lof_tolerance": "low"
+    },
+    {
+      "symbol": "STK11",
+      "transcript": "NM_000455.4",
+      "conditions": ["Peutz-Jeghers Syndrome"],
+      "inheritance": "AD",
+      "pli_score": 0.92,
+      "lof_tolerance": "low"
+    },
+    {
+      "symbol": "CDH1",
+      "transcript": "NM_004360.3",
+      "conditions": ["Hereditary Diffuse Gastric Cancer"],
+      "inheritance": "AD",
+      "pli_score": 0.86,
+      "lof_tolerance": "medium"
+    },
+    {
+      "symbol": "PALB2",
+      "transcript": "NM_024675.3",
+      "conditions": ["Hereditary Breast Cancer"],
+      "inheritance": "AD",
+      "pli_score": 0.93,
+      "lof_tolerance": "low"
+    },
+    {
+      "symbol": "CHEK2",
+      "transcript": "NM_007194.3",
+      "conditions": ["Hereditary Breast Cancer", "Li-Fraumeni Syndrome 2"],
+      "inheritance": "AD",
+      "pli_score": 0.89,
+      "lof_tolerance": "medium"
+    },
+    {
+      "symbol": "ATM",
+      "transcript": "NM_000051.3",
+      "conditions": ["Ataxia-Telangiectasia", "Hereditary Breast Cancer"],
+      "inheritance": "AR/AD",
+      "pli_score": 0.98,
+      "lof_tolerance": "low"
+    },
+    {
+      "symbol": "MUTYH",
+      "transcript": "NM_001128425.1",
+      "conditions": ["MUTYH-Associated Polyposis"],
+      "inheritance": "AR",
+      "pli_score": 0.65,
+      "lof_tolerance": "medium"
+    }
+  ],
+  "regions_of_interest": [
+    {
+      "gene": "BRCA1",
+      "chromosome": "17",
+      "start": 43044295,
+      "end": 43170245,
+      "build": "GRCh38"
+    },
+    {
+      "gene": "BRCA2",
+      "chromosome": "13",
+      "start": 32315086,
+      "end": 32400266,
+      "build": "GRCh38"
+    }
+  ]
+} 

@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Clinical Report Schema",
+  "description": "Schema for validating clinical genomics report data",
+  "type": "object",
+  "required": [
+    "report_id",
+    "report_date",
+    "patient_id",
+    "sample_id",
+    "variants"
+  ],
+  "properties": {
+    "report_id": {
+      "type": "string",
+      "description": "Unique identifier for the report"
+    },
+    "report_title": {
+      "type": "string",
+      "description": "Title of the clinical report"
+    },
+    "report_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the report was generated"
+    },
+    "patient_id": {
+      "type": "string",
+      "description": "Unique identifier for the patient"
+    },
+    "sample_id": {
+      "type": "string",
+      "description": "Unique identifier for the sample"
+    },
+    "dob": {
+      "type": "string",
+      "format": "date",
+      "description": "Patient's date of birth"
+    },
+    "sex": {
+      "type": "string",
+      "enum": ["Male", "Female", "Other", "Unknown"],
+      "description": "Patient's sex"
+    },
+    "indication": {
+      "type": "string",
+      "description": "Clinical indication for testing"
+    },
+    "result_class": {
+      "type": "string",
+      "enum": ["positive", "negative", "inconclusive"],
+      "description": "Overall classification of the test result"
+    },
+    "variants": {
+      "type": "array",
+      "description": "List of variants identified in the sample",
+      "items": {
+        "type": "object",
+        "required": ["gene", "hgvs", "zygosity", "significance", "classification"],
+        "properties": {
+          "gene": {
+            "type": "string",
+            "description": "Gene symbol"
+          },
+          "hgvs": {
+            "type": "string",
+            "description": "HGVS notation of the variant"
+          },
+          "zygosity": {
+            "type": "string",
+            "description": "Zygosity of the variant"
+          },
+          "transcript": {
+            "type": "string",
+            "description": "Transcript identifier"
+          },
+          "significance": {
+            "type": "string",
+            "description": "Clinical significance description"
+          },
+          "classification": {
+            "type": "string",
+            "enum": ["Pathogenic", "Likely Pathogenic", "Uncertain Significance", "Likely Benign", "Benign"],
+            "description": "Variant classification"
+          },
+          "significance_class": {
+            "type": "string",
+            "enum": ["pathogenic", "likely-pathogenic", "vus", "likely-benign", "benign"],
+            "description": "CSS class for the variant row"
+          }
+        }
+      }
+    },
+    "clinical_interpretation": {
+      "type": "string",
+      "description": "Clinical interpretation of the test results"
+    },
+    "disclaimer_text": {
+      "type": "string",
+      "description": "Disclaimer text for the report"
+    },
+    "reviewer_name": {
+      "type": "string",
+      "description": "Name of the report reviewer"
+    },
+    "reviewer_credentials": {
+      "type": "string",
+      "description": "Credentials of the report reviewer"
+    },
+    "reviewer_title": {
+      "type": "string",
+      "description": "Title of the report reviewer"
+    },
+    "review_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the report was reviewed"
+    }
+  }
+} 

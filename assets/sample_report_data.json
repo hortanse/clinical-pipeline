@@ -1,0 +1,38 @@
+{
+  "report_id": "GR-12345",
+  "report_title": "Whole Exome Sequencing Report",
+  "report_date": "2023-06-15",
+  "patient_id": "PT-67890",
+  "sample_id": "SM-54321",
+  "dob": "1985-03-22",
+  "sex": "Female",
+  "indication": "Suspected hereditary cancer syndrome",
+  "results_summary": "Pathogenic variant identified in BRCA1 gene associated with Hereditary Breast and Ovarian Cancer Syndrome.",
+  "result_class": "positive",
+  "variants": [
+    {
+      "gene": "BRCA1",
+      "hgvs": "c.5266dupC (p.Gln1756Profs*74)",
+      "zygosity": "Heterozygous",
+      "transcript": "NM_007294.3",
+      "significance": "This variant is classified as pathogenic and is associated with increased risk for breast and ovarian cancer.",
+      "classification": "Pathogenic",
+      "significance_class": "pathogenic"
+    },
+    {
+      "gene": "ATM",
+      "hgvs": "c.8122G>A (p.Asp2708Asn)",
+      "zygosity": "Heterozygous",
+      "transcript": "NM_000051.3",
+      "significance": "This variant has uncertain significance in relation to cancer predisposition.",
+      "classification": "Uncertain Significance",
+      "significance_class": "vus"
+    }
+  ],
+  "clinical_interpretation": "A heterozygous pathogenic variant c.5266dupC (p.Gln1756Profs*74) was identified in the BRCA1 gene. This variant results in a frameshift and premature protein truncation, and is one of the most common BRCA1 pathogenic variants, also known as 5382insC. This variant is associated with Hereditary Breast and Ovarian Cancer Syndrome (HBOC), which is characterized by an increased risk for breast, ovarian, pancreatic, and prostate cancers.\n\nAdditionally, a heterozygous variant of uncertain significance c.8122G>A (p.Asp2708Asn) was identified in the ATM gene. The clinical significance of this variant is currently unclear.",
+  "disclaimer_text": "This report contains genetic information which should be interpreted in the context of clinical findings, family history, and other laboratory data. This report is based on current scientific knowledge and does not constitute medical advice. Consultation with a healthcare provider regarding the clinical implications of this result is recommended.",
+  "reviewer_name": "Robert Johnson",
+  "reviewer_credentials": "PhD, FACMG",
+  "reviewer_title": "Laboratory Director",
+  "review_date": "2023-06-15"
+} 

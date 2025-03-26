@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Clinical Genomics Report</title>
+    <link rel="stylesheet" href="report_styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="organization_logo.png" alt="Organization Logo">
+        </div>
+        <div class="report-info">
+            <h1>Anonymous Clinical Genomics Report</h1>
+            <p class="report-type">De-identified Research Report</p>
+            <p class="report-date">Report Date: {{ report_date }}</p>
+            <p class="report-id">Report ID: {{ report_id }}</p>
+        </div>
+    </header>
+
+    <section class="specimen-info">
+        <h2>Specimen Information</h2>
+        <div class="info-grid">
+            <div class="info-item">
+                <span class="label">Sample ID:</span>
+                <span class="value">{{ sample_id }}</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Specimen Type:</span>
+                <span class="value">{{ specimen_type|default('Not specified') }}</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Test Type:</span>
+                <span class="value">{{ test_name|default('Genomic Analysis') }}</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-summary">
+        <h2>Results Summary</h2>
+        <div class="summary-box {{ result_class }}">
+            <p>{{ results_summary }}</p>
+        </div>
+    </section>
+
+    <section class="variant-details">
+        <h2>Variant Details</h2>
+        <table class="variants-table">
+            <thead>
+                <tr>
+                    <th>Gene</th>
+                    <th>Variant</th>
+                    <th>Zygosity</th>
+                    <th>Transcript</th>
+                    <th>Clinical Significance</th>
+                    <th>Classification</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for variant in variants %}
+                <tr class="{{ variant.significance_class }}">
+                    <td>{{ variant.gene }}</td>
+                    <td>{{ variant.hgvs }}</td>
+                    <td>{{ variant.zygosity }}</td>
+                    <td>{{ variant.transcript }}</td>
+                    <td>{{ variant.significance }}</td>
+                    <td>{{ variant.classification }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <section class="interpretation">
+        <h2>Clinical Interpretation</h2>
+        <div class="interpretation-text">
+            {{ clinical_interpretation }}
+        </div>
+    </section>
+
+    <section class="test-details">
+        <h2>Test Details</h2>
+        <h3>Assay Information</h3>
+        <p>{{ assay_details|default('Not specified') }}</p>
+        
+        <h3>Limitations</h3>
+        <p>{{ test_limitations|default('Not specified') }}</p>
+    </section>
+
+    <footer>
+        <div class="disclaimer">
+            <p>This is a de-identified report intended for research purposes only. This report does not contain any personal health information (PHI) and should not be used for clinical decision making.</p>
+        </div>
+        <div class="footer-info">
+            <p>{{ organization_name }}</p>
+            <p>Research Use Only - Not for Clinical Use</p>
+            <p>Page {{ page_number }} of {{ total_pages }}</p>
+        </div>
+    </footer>
+</body>
+</html> 
